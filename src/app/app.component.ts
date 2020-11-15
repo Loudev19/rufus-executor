@@ -24,4 +24,11 @@ export class AppComponent {
       }
     )
   }
+
+  onTab(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      this.code += "  ";
+    }
+  }
 }
