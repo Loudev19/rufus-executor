@@ -17,7 +17,7 @@ export class AppComponent {
   execute() {
     this._exec.executeCode(this.code).subscribe(
       res => {
-        console.log(res);
+        this.response = res;
       },
       error => {
         console.log(error);
