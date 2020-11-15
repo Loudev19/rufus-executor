@@ -9,13 +9,13 @@
               <button (click)="execute()" type="submit" class="btn btn-danger float-right">Ejecutar</button>
           </div>
           <div class="form-group mt-4">
-              <textarea [(ngModel)]="code" [ngModelOptions]="{standalone: true}" (keydown)="onTab($event)" class="form-control" id="code" rows="10" placeholder="# Write your code here"></textarea>
+              <textarea [(ngModel)]="code" [ngModelOptions]="{standalone: true}" (keydown)="onTab($event)" #r class="form-control" id="code" rows="10" placeholder="# Write your code here"></textarea>
           </div>
       </form> 
     </div>
     <div class="bg-response p-2 mt-4">
       <label>Response</label>
-      <textarea class="form-control" id="response" rows="3" disabled>{{response}}</textarea>
+      <textarea class="form-control" [ngStyle]="{'color': pythonError ? 'red' : 'black'}" id="response" rows="3" disabled>{{response}}</textarea>
     </div>
   </div>
 </div>
