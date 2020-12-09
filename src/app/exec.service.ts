@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class ExecService {
 
-  private _url = 'http://34.69.153.204/code/';
+  private _url = 'http://35.184.253.213/code/';
 
   constructor(private http: HttpClient) { }
 
